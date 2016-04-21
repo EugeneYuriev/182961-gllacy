@@ -51,29 +51,38 @@
           </div>
           <div class="basket-block">
             <a class="user-block-item basket-full" href="#"></a>
-            <div class="busket-popup">
+            <div class="basket-popup">
               <table>
-                <tr>
-                  <td><a href="#"><img src="http://placehold.it/150x100" alt="Удалить"></a></td>
-                  <td><img src="http://placehold.it/150x100" alt=""></td>
-                  <td>Пломбир с апельсиновым джемом</td>
-                  <td>1,5кг х <span>200р</span></td>
-                  <td>300 руб.</td>
-                </tr>
-                <tr>
-                  <td><a href="#"><img src="http://placehold.it/150x100" alt="Удалить"></a></td>
-                  <td><img src="http://placehold.it/150x100" alt=""></td>
-                  <td>Клубничный пломбир с присыпкой из белого шоколада</td>
-                  <td>1,5кг х <span>300р</span></td>
-                  <td>450 руб.</td>
-                </tr>
+                <tbody>
+                  <tr>
+                    <td><a href="#"><img src="http://placehold.it/150x100" alt="Удалить"></a></td>
+                    <td><img src="http://placehold.it/150x100" alt=""></td>
+                    <td>Пломбир с апельсиновым джемом</td>
+                    <td>1,5кг х <span>200р</span></td>
+                    <td>300 руб.</td>
+                  </tr>
+                  <tr>
+                    <td><a href="#"><img src="http://placehold.it/150x100" alt="Удалить"></a></td>
+                    <td><img src="http://placehold.it/150x100" alt=""></td>
+                    <td>Клубничный пломбир с присыпкой из белого шоколада</td>
+                    <td>1,5кг х <span>300р</span></td>
+                    <td>450 руб.</td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td colspan="5">Итого: 750 руб.</td>
+                  </tr>
+                </tfoot>
               </table>
-              <div class="busket-total">
-                Итого: 750 руб.
-              </div>
               <a href="#" class="btn">Оформить заказ</a>
             </div>
           </div>
+          <ul class="breadcrumb">
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Каталог</a></li>
+            <li class="active">Сливочное</li>
+          </ul>
           <div class="header-contacts">
             С 10 до 20, ежедневно
             <b>8 812 450-25-25</b>
@@ -82,16 +91,8 @@
       </div>
     </header>
     <main class="container">
-
-      <div class="catalog-content">
-        <header class="catalog-header">
-          <ul class="breadcrumb">
-            <li><a href="#">Главная</a></li>
-            <li><a href="#">Каталог</a></li>
-            <li class="active">Сливосное</li>
-          </ul>
-          <h1>Сливочное мороженое</h1>
-        </header>
+      <div class="wrapper">
+        <h1>Сливочное мороженое</h1>
         <div class="search-block">
           <form class="catalog-search-form" action="https://echo.htmlacademy.ru" method="post">
             <fieldset class="search-sorting">
@@ -103,28 +104,40 @@
                 <option value="fatness">по жирности</option>
               </select>
             </fieldset>
-            <div class="price-range">
-              <!-- Не пойму как делать -->
+            <div class="range-filter">
+              <div class="price-controls">
+                  Цена: <input class="min-price" type="text" value="0"> руб.
+                  - <input class="max-price" type="text" value="1000"> руб.
+              </div>
+              <div class="range-controls">
+                  <div class="scale"><div style="margin-left:50px;width:100px;" class="bar"></div></div>
+                  <div class="toggle min-toggle"></div>
+                  <div class="toggle max-toggle"></div>
+              </div>
             </div>
             <fieldset class="search-fatness">
               <legend>Жирность:</legend>
-              <input type="radio" name="fatness" value="0%">
-              <input type="radio" name="fatness" value="до 10%" checked>
-              <input type="radio" name="fatness" value="до 30%">
-              <input type="radio" name="fatness" value="выше 30%">
+              <div class="search-fatness-options">
+                <input type="radio" name="fatness" value="0%">
+                <input type="radio" name="fatness" value="до 10%" checked>
+                <input type="radio" name="fatness" value="до 30%">
+                <input type="radio" name="fatness" value="выше 30%">
+              </div>
             </fieldset>
             <fieldset class="search-addition">
               <legend>Наполнители:</legend>
-              <input type="checkbox" name="addition-chocolate" id="addition-chocolate" checked>
-              <label for="addition-chocolate">шоколадные</label>
-              <input type="checkbox" name="addition-sugar" id="addition-sugar" checked>
-              <label for="addition-sugar">сахарные присыпки</label>
-              <input type="checkbox" name="addition-fruit" id="addition-fruit">
-              <label for="addition-fruit">фрукты</label>
-              <input type="checkbox" name="addition-syrup" id="addition-syrup">
-              <label for="addition-syrup">сиропы</label>
-              <input type="checkbox" name="addition-jam" id="addition-jam">
-              <label for="addition-jam">джемы</label>
+              <div class="search-addition-options">
+                <input type="checkbox" name="addition-chocolate" id="addition-chocolate" checked>
+                <label for="addition-chocolate">шоколадные</label>
+                <input type="checkbox" name="addition-sugar" id="addition-sugar" checked>
+                <label for="addition-sugar">сахарные присыпки</label>
+                <input type="checkbox" name="addition-fruit" id="addition-fruit">
+                <label for="addition-fruit">фрукты</label>
+                <input type="checkbox" name="addition-syrup" id="addition-syrup">
+                <label for="addition-syrup">сиропы</label>
+                <input type="checkbox" name="addition-jam" id="addition-jam">
+                <label for="addition-jam">джемы</label>
+              </div>
             </fieldset>
             <button class="btn" type="submit">Применить</button>
           </form>
@@ -141,7 +154,7 @@
             </div>
           </article>
           <article class="catalog-item">
-            <div class="item-block">
+            <div class="item-image">
               <img src="img/item-1.jpg" width="70" height="50" alt="">
               <div class="item-price"><span class="price">380₽</span><span class="unit">кг</span></div>
             </div>
@@ -151,7 +164,7 @@
             </div>
           </article>
           <article class="catalog-item">
-            <div class="item-block">
+            <div class="item-image">
               <img src="img/item-1.jpg" width="70" height="50" alt="">
               <div class="item-price"><span class="price">355₽</span><span class="unit">кг</span></div>
             </div>
@@ -161,7 +174,7 @@
             </div>
           </article>
           <article class="catalog-item">
-            <div class="item-block">
+            <div class="item-image">
               <img src="img/item-1.jpg" width="70" height="50" alt="">
               <div class="item-price"><span class="price">415₽</span><span class="unit">кг</span></div>
             </div>
@@ -171,7 +184,7 @@
             </div>
           </article>
           <article class="catalog-item">
-            <div class="item-block">
+            <div class="item-image">
               <img src="img/item-1.jpg" width="70" height="50" alt="">
               <div class="item-price"><span class="price">325₽</span><span class="unit">кг</span></div>
             </div>
@@ -181,7 +194,7 @@
             </div>
           </article>
           <article class="catalog-item">
-            <div class="item-block">
+            <div class="item-image">
               <img src="img/item-1.jpg" width="70" height="50" alt="">
               <div class="item-price"><span class="price">410₽</span><span class="unit">кг</span></div>
             </div>
@@ -191,7 +204,7 @@
             </div>
           </article>
           <article class="catalog-item">
-            <div class="item-block">
+            <div class="item-image">
               <img src="img/item-1.jpg" width="70" height="50" alt="">
               <div class="item-price"><span class="price">375₽</span><span class="unit">кг</span></div>
             </div>
@@ -201,7 +214,7 @@
             </div>
           </article>
           <article class="catalog-item">
-            <div class="item-block">
+            <div class="item-image">
               <img src="img/item-1.jpg" width="70" height="50" alt="">
               <div class="item-price"><span class="price">320₽</span><span class="unit">кг</span></div>
             </div>
@@ -211,7 +224,7 @@
             </div>
           </article>
           <article class="catalog-item">
-            <div class="item-block">
+            <div class="item-image">
               <img src="img/item-1.jpg" width="70" height="50" alt="">
               <div class="item-price"><span class="price">440₽</span><span class="unit">кг</span></div>
             </div>
@@ -221,7 +234,7 @@
             </div>
           </article>
           <article class="catalog-item">
-            <div class="item-block">
+            <div class="item-image">
               <img src="img/item-1.jpg" width="70" height="50" alt="">
               <div class="item-price"><span class="price">435₽</span><span class="unit">кг</span></div>
             </div>
@@ -231,7 +244,7 @@
             </div>
           </article>
           <article class="catalog-item">
-            <div class="item-block">
+            <div class="item-image">
               <img src="img/item-1.jpg" width="70" height="50" alt="">
               <div class="item-price"><span class="price">355₽</span><span class="unit">кг</span></div>
             </div>
@@ -241,7 +254,7 @@
             </div>
           </article>
           <article class="catalog-item">
-            <div class="item-block">
+            <div class="item-image">
               <img src="img/item-1.jpg" width="70" height="50" alt="">
               <div class="item-price"><span class="price">420₽</span><span class="unit">кг</span></div>
             </div>
