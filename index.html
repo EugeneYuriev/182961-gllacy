@@ -3,15 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>Глейси - Магазин мороженого</title>
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
-      <div class="container">
-        <div class="main-header-logo">
-          <img src="img/logo.png" width="154" height="64" alt="Глейси">
-        </div>
+      <div class="container clearfix">
         <nav class="main-navigation">
+          <div class="main-header-logo">
+            <img src="img/logo.png" width="154" height="64" alt="Глейси">
+          </div>
           <ul class="main-menu">
             <li>
               <a href="#">Каталог</a>
@@ -44,13 +45,17 @@
                 <input type="password" name="password" placeholder="Пароль" required>
                 <button class="btn" type="submit">Войти</button>
               </form>
-              <a href="#">Забыли пароль?</a>
-              <a href="#">Новая регистрация</a>
+              <div class="login-options">
+                <a href="#">Забыли пароль?</a>
+                <a href="#">Новая регистрация</a>
+              </div>
             </div>
           </div>
           <div class="basket-block">
-            <a class="user-block-item basket-empty" href="#"></a>
+            <a class="user-block-item basket-empty" href="#">Пусто</a>
           </div>
+        </div>
+        <div class="header-bottom-row clearfix">          
           <div class="header-contacts">
             С 10 до 20, ежедневно
             <b>8 812 450-25-25</b>
@@ -84,7 +89,7 @@
             <input type="radio" id="btn-3" name="toggle">
           </div>
         </div>
-        <div class="row promo">
+        <div class="row promo clearfix">
           <div class="card promo-strawberry">
             <b>Малинка даром!</b>
             <p>При покупке 2 кг любого фруктого мороженного, добавим в ваш заказ банку малинового варенья бесплатно.</p>
@@ -146,12 +151,12 @@
             </li>
         </ul>
         </div>
-        <div class="row news">
-          <div class="card news">
+        <div class="row news clearfix">
+          <div class="card news-item">
             <h2>Новое в нашем блоге</h2>
             <a href="#">10 способов сервировки фруктовых щербетов в столу</a>
           </div>
-          <div class="card news">
+          <div class="card news-item">
             <p>
               Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =)
             </p>
@@ -162,7 +167,7 @@
           </div>
         </div>
         <div class="row map">
-          <figure class="map">
+          <figure class="map-image">
             <img src="img/map.jpg" alt="map-adress">
           </figure>
           <section class="map-contacts">
@@ -194,7 +199,7 @@
       </div>
     </main>
     <footer class="main-footer">
-      <div class="container">
+      <div class="container clearfix">
         <section class="footer-social">
           <a class="social-btn social-btn-tw" href="#">Твитер</a>
           <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
@@ -202,10 +207,7 @@
           <a class="social-btn social-btn-vk" href="#">Вконтакте</a>
         </section>
         <section class="footer-about">
-          <a class="for-suppliers" href="#">
-            <img src="img/heart.png" alt="Лучшие поставщики">
-            Для поставщиков
-          </a>
+          <a href="#">Для поставщиков</a>
           <a href="#">О производстве</a>
           <a href="#">Наши документы</a>
           <a href="#">Экологические стандарты</a>

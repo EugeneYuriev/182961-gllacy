@@ -3,17 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title>Глейси - Магазин мороженого</title>
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
-      <div class="container">
-        <div class="main-header-logo">
-          <a href="#">
-            <img src="img/logo.png" width="154" height="64" alt="Глейси">
-          </a>
-        </div>
+      <div class="container clearfix">
         <nav class="main-navigation">
+          <div class="main-header-logo">
+            <a href="#">
+              <img src="img/logo.png" width="154" height="64" alt="Глейси">
+            </a>
+          </div>
           <ul class="main-menu">
             <li class="active">
               <a href="#">Каталог</a>
@@ -51,19 +52,19 @@
             </div>
           </div>
           <div class="basket-block">
-            <a class="user-block-item basket-full" href="#"></a>
+            <a class="user-block-item basket-full" href="#">2 товара</a>
             <div class="basket-popup">
               <table>
                 <tbody>
                   <tr>
-                    <td><a href="#">Удалить</a></td>
+                    <td><a href="#">X</a></td>
                     <td><img src="img/item-1.png" alt="" width="33" height="33"></td>
                     <td>Пломбир с апельсиновым джемом</td>
                     <td>1,5кг х <span>200р</span></td>
                     <td>300 руб.</td>
                   </tr>
                   <tr>
-                    <td><a href="#">Удалить</a></td>
+                    <td><a href="#">X</a></td>
                     <td><img src="img/item-3.png" alt="" width="33" height="33"></td>
                     <td>Клубничный пломбир с присыпкой из белого шоколада</td>
                     <td>1,5кг х <span>300р</span></td>
@@ -77,22 +78,22 @@
               <a href="#" class="btn">Оформить заказ</a>
             </div>
           </div>
-          <div class="header-bottom-row">
-            <ul class="breadcrumb">
-              <li><a href="#">Главная</a></li>
-              <li><a href="#">Каталог</a></li>
-              <li class="active">Сливочное</li>
-            </ul>
-            <div class="header-contacts">
-              С 10 до 20, ежедневно
-              <b>8 812 450-25-25</b>
-            </div>
         </div>
+        <div class="header-bottom-row clearfix">
+          <ul class="breadcrumb">
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Каталог</a></li>
+            <li class="active">Сливочное</li>
+          </ul>
+          <div class="header-contacts">
+            С 10 до 20, ежедневно
+            <b>8 812 450-25-25</b>
+          </div>
         </div>
       </div>
     </header>
     <main class="container">
-      <div class="wrapper">
+      <div class="wrapper cleafix">
         <h1>Сливочное мороженое</h1>
         <div class="search-block">
           <form class="catalog-search-form" action="https://echo.htmlacademy.ru" method="post">
@@ -145,7 +146,7 @@
         </div>
         <div class="catalog-items">
           <article class="catalog-item">
-            <div class="item-block">
+            <div class="item-image">
               <img src="img/item-1.png" width="268" height="268" alt="">
               <div class="item-price"><span class="price">310₽</span><span class="unit">кг</span></div>
             </div>
@@ -285,10 +286,7 @@
           <a class="social-btn social-btn-vk" href="#">Вконтакте</a>
         </section>
         <section class="footer-about">
-          <a class="for-suppliers" href="#">
-            <img src="http://placehold.it/10x10" alt="Лучшие поставщики">
-            Для поставщиков
-          </a>
+          <a class="for-suppliers" href="#">Для поставщиков</a>
           <a class="about-production" href="#">О производстве</a>
           <a class="our-docs" href="#">Наши документы</a>
           <a class="eco-standars" href="#">Экологические стандарты</a>
