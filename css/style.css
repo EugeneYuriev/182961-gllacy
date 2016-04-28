@@ -23,7 +23,6 @@ body {
 
 body {
   background-color: #849d8f;
-  background-size: auto auto;
 }
 
 .clearfix::after {
@@ -33,9 +32,8 @@ body {
 }
 
 .container {
-  width: 1146px;
+  width: 1200px;
   margin: 0 auto;
-  padding: 0 26px;
   outline: 1px solid #666;
 }
 
@@ -85,25 +83,20 @@ body {
 .search-popup {
   display: none;
   position: absolute;
-  bottom: -90px;
-  left: -330px;
-  width: 345px;
-  height: 84px;
+  width: 318px;
+  padding: 44px 22px;
   outline: 1px solid #666;
 }
 
 .search-popup input[type="text"] {
-  display: block;
-  width: 310px;
-  margin: 22px 17px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .login-popup {
   display: none;
   position: absolute;
   z-index: 10;
-  bottom: -220px;
-  left: -260px;
   width: 279px;
   height: 214px;
   outline: 1px solid #666;
@@ -112,7 +105,6 @@ body {
 .login-popup input[type="email"],
 .login-popup input[type="password"],
 .login-popup .btn {
-  display: block;
   width: 240px;
   height: 44px;
   margin-top: 20px;
@@ -137,10 +129,7 @@ body {
 .basket-popup {
   display: none;
   position: absolute;
-  top: 40px;
-  left: -360px;
   width: 540px;
-  height: 240px;
   outline: 1px solid #666;
 }
 
@@ -159,9 +148,9 @@ body {
 }
 
 .basket-popup .btn {
-  position: absolute;
-  right: 15px;
-  bottom: 20px;
+  float: right;
+  width: 173px;
+  margin: 40px 15px;
 }
 
 .basket-popup td:nth-child(4),
@@ -174,7 +163,7 @@ body {
   outline: 1px solid #666;
 }
 
-.breadcrumb {
+.breadcrumbs {
   float: left;
   width: 560px;
   margin: 0;
@@ -184,7 +173,7 @@ body {
   outline: 1px solid #666;
 }
 
-.breadcrumb li {
+.breadcrumbs li {
   display: inline-block;
   vertical-align: top;
 }
@@ -236,41 +225,32 @@ section {
 
 /*  index  */
 .slider {
-  position: relative;
   width: 1146px;
   min-height: 500px;
   margin-bottom: 40px;
   outline: 1px solid #666;
 }
 
-.slider-slides {
-  position: relative;
-}
 
 .slider-slide {
-  position: absolute;
   display: none;
-  width: 1000px;
+  /*float: right;*/
+  width: 900px;
+  min-height: 600px;
   margin: 0 auto;
   outline: 1px solid #666;
+  background-image: url("../img/slide-1.png");
+  background-size: 100%;
 }
 
 .slider-slide:first-child {
   display: block;
 }
 
-.slider-slide img {
-  position: absolute;
-  left: 50px;
-  width: 1000px;
-  margin: 0 auto;
-}
-
-.slider-slide span {
-  position: absolute;
-  top: 320px;
-  left: 220px;
+.slider-title {
   width: 680px;
+  margin: 0 auto;
+  padding-top: 30%;
   font-size: 60px;
   color: #ffffff;
   line-height: 60.35px;
@@ -279,17 +259,24 @@ section {
 }
 
 .slider-slide .btn {
-  position: absolute;
-  top: 470px;
-  left: 520px;
+  display: block;
   width: 278px;
+  margin: 0 auto;
+  margin-top: 50px;
+  text-align: center;
+  font-size: 32px;
+  outline: 1px solid #666;
 }
 
 .slider-controls {
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  float: left;
+  width: 80px;
+  margin-top: -150px;
   outline: 1px solid #666;
+}
+
+.wrapper {
+  padding: 0 4.6%;
 }
 
 .row {
@@ -298,10 +285,10 @@ section {
 }
 
 .card {
-  position: relative;
   min-height: 230px;
-  width: 520px;
+  width: 46.6%;
   padding: 25px 20px;
+  box-sizing: border-box;
   outline: 1px solid #666;
 }
 
@@ -312,14 +299,14 @@ section {
 
 .promo-chocolate {
   float: right;
-  margin-left: 26px;
+  margin-left: 2.2%;
   outline: 1px solid #666;
 }
 
 .card .btn {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
+  float: right;
+  width: 167px;
+  outline: 1px solid #666;
 }
 
 .popular-items, .catalog-items {
@@ -334,8 +321,8 @@ article {
 .catalog-item {
   display: inline-block;
   vertical-align: top;
-  width: 267px;
-  margin-right: 26px;
+  width: 22.2%;
+  margin-right: 2.2%;
   font-size: 45px;
   outline: 1px solid #666;
 }
@@ -344,9 +331,14 @@ article {
   margin-right: 0;
 }
 
+.item-image img {
+  width: 100%;
+  height: 100%;
+}
+
+
 .catalog-item .item-image {
   position: relative;
-  height: 270px;
 }
 
 .catalog-item .item-price {
@@ -373,7 +365,7 @@ article {
 .about-shop li {
   display: inline-block;
   vertical-align: top;
-  width: 485px;
+  width: 400px;
   padding-left: 75px;
   padding-bottom: 30px;
 }
@@ -393,11 +385,10 @@ article {
 .mailing-form input[type="email"] {
   display: inline-block;
   vertical-align: top;
-  width: 368px;
+  width: 280px;
 }
 
 .mailing-form .btn {
-  position: static;
   display: inline-block;
   vertical-align: top;
 }
@@ -409,11 +400,6 @@ figure {
 
 .map {
   position: relative;
-}
-
-.map-image {
-  position: relative;
-  left: -26px;
 }
 
 .map-contacts {
@@ -431,7 +417,6 @@ figure {
   top: 340px;
   left: 40%;
   width: 436px;
-  height: 443px;
   padding: 22px 20px;
   outline: 1px solid #666;
 }
@@ -441,19 +426,17 @@ figure {
 .feedback-popup textarea {
   display: block;
   width: 266px;
-  height: 45px;
   margin-top: 22px;
 }
 
 .feedback-popup textarea {
   width: 427px;
-  height: 155px;
+  margin-bottom: 30px;
 }
 
 .feedback-popup .btn {
-  position: absolute;
-  right: 25px;
-  bottom: 27px;
+  float: right;
+  width: 142px;
 }
 
 /*  catalog  */
@@ -499,6 +482,10 @@ figure {
   width: 146px;
 }
 
+.catalog-items {
+  outline: 1px solid #666;
+}
+
 .catalog-item {
   position: relative;
 }
@@ -506,20 +493,21 @@ figure {
 .item-express-view {
   display: none;
   position: absolute;
-  top: -5px;
-  left: -5px;
-  width: 278px;
-  height: 450px;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 50px;
+  top: 0;
+  left: 0;
   font-size: 18px;
   background-color: rgba(255, 0, 0, 0.1);
 }
 
 .item-express-view a {
-  position: absolute;
-  bottom: 20px;
   display: block;
   width: 206px;
-  margin-left: 55px;
+  margin: 0 auto;
+  text-align: center;
+  outline: 1px solid #666;
 }
 
 .pagination {
