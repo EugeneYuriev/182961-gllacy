@@ -37,6 +37,11 @@ body {
   outline: 1px solid #666;
 }
 
+.wrapper {
+  padding: 0 2.3%;
+  outline: 1px solid #666;
+}
+
 .main-navigation {
   float: left;
   padding-top: 10px;
@@ -83,6 +88,7 @@ body {
 .search-popup {
   display: none;
   position: absolute;
+  right: 0;
   width: 318px;
   padding: 44px 22px;
   outline: 1px solid #666;
@@ -96,6 +102,7 @@ body {
 .login-popup {
   display: none;
   position: absolute;
+  right: 0;
   z-index: 10;
   width: 279px;
   height: 214px;
@@ -129,6 +136,7 @@ body {
 .basket-popup {
   display: none;
   position: absolute;
+  right: 0;
   width: 540px;
   outline: 1px solid #666;
 }
@@ -165,7 +173,7 @@ body {
 
 .breadcrumbs {
   float: left;
-  width: 560px;
+  /*width: 560px;*/
   margin: 0;
   margin-top: 20px;
   padding: 0;
@@ -275,10 +283,6 @@ section {
   outline: 1px solid #666;
 }
 
-.wrapper {
-  padding: 0 4.6%;
-}
-
 .row {
   margin-bottom: 40px;
   outline: 1px solid #666;
@@ -286,7 +290,7 @@ section {
 
 .card {
   min-height: 230px;
-  width: 46.6%;
+  width: 48.86%;
   padding: 25px 20px;
   box-sizing: border-box;
   outline: 1px solid #666;
@@ -321,13 +325,13 @@ article {
 .catalog-item {
   display: inline-block;
   vertical-align: top;
-  width: 22.2%;
-  margin-right: 2.2%;
+  width: 23.29%;
+  margin-right: 2.26%;
   font-size: 45px;
   outline: 1px solid #666;
 }
 
-.catalog-item:last-child {
+.catalog-item:nth-child(4n) {
   margin-right: 0;
 }
 
@@ -446,7 +450,7 @@ figure {
   outline: 1px solid #666;
 }
 
-.search-block {
+.catalog-search-block {
   margin-bottom: 40px;
 }
 
@@ -512,7 +516,7 @@ figure {
 
 .pagination {
   float: right;
-  width: 150px;
+  width: 250px;
   list-style: none;
   margin: 0;
   margin-top: 20px;
