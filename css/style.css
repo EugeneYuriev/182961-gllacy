@@ -199,14 +199,14 @@ body {
 
 .footer-social {
   float: left;
-  width: 190px;
+  width: 23.29%;
   outline: 1px solid #666;
 }
 
 .footer-about {
   float: left;
-  width: 350px;
-  margin-left: 200px;
+  width: 46.58%;
+  margin: 0 3%;
   outline: 1px solid #666;
 }
 
@@ -218,7 +218,7 @@ body {
 
 .footer-copyright {
   float: right;
-  width: 195px;
+  width: 23.29%;
   outline: 1px solid #666;
 }
 
@@ -233,8 +233,6 @@ section {
 
 /*  index  */
 .slider {
-  width: 1146px;
-  min-height: 500px;
   margin-bottom: 40px;
   outline: 1px solid #666;
 }
@@ -242,9 +240,8 @@ section {
 
 .slider-slide {
   display: none;
-  /*float: right;*/
   width: 900px;
-  min-height: 600px;
+  min-height: 700px;
   margin: 0 auto;
   outline: 1px solid #666;
   background-image: url("../img/slide-1.png");
@@ -279,7 +276,7 @@ section {
 .slider-controls {
   float: left;
   width: 80px;
-  margin-top: -150px;
+  margin-top: -270px;
   outline: 1px solid #666;
 }
 
@@ -364,14 +361,16 @@ article {
   list-style: none;
   margin: 0;
   padding: 0;
+  font-size: 0;
 }
 
 .about-shop li {
   display: inline-block;
   vertical-align: top;
-  width: 400px;
-  padding-left: 75px;
+  width: 45%;
+  padding-left: 5%;
   padding-bottom: 30px;
+  font-size: 16px;
 }
 
 .news-item:nth-child(1) {
@@ -389,7 +388,7 @@ article {
 .mailing-form input[type="email"] {
   display: inline-block;
   vertical-align: top;
-  width: 280px;
+  width: 50%;
 }
 
 .mailing-form .btn {
@@ -406,12 +405,17 @@ figure {
   position: relative;
 }
 
+.map-image img {
+  width: 100%;
+}
+
 .map-contacts {
   position: absolute;
-  top: 63px;
+  top: 10%;
   right: 0;
-  width: 250px;
-  padding: 0 26px;
+  width: 25%;
+  margin: 0 2.3%;
+  padding: 2.2%;
   outline: 1px solid #666;
 }
 
@@ -462,28 +466,29 @@ figure {
  {
   display: inline-block;
   vertical-align: top;
-  margin-right: 16px;
+  margin-right: 1.4%;
   margin-top: 17px;
+  outline: 1px solid #666;
 }
 
 .search-sorting {
-  width: 194px;
+  width: 17%;
 }
 
 .range-filter {
-  width: 219px;
+  width: 19%;
 }
 
 .search-fatness {
-  width: 415px;
+  width: 36%;
 }
 
 .search-addition {
-  width: 703px;
+  width: 64%;
 }
 
 .catalog-search-form .btn {
-  width: 146px;
+  width: 12%;
 }
 
 .catalog-items {
