@@ -11,6 +11,25 @@
     <input type="radio" id="btn-1" name="toggle" checked>
     <input type="radio" id="btn-2" name="toggle">
     <input type="radio" id="btn-3" name="toggle">
+    <div class="feedback-popup">
+      <button class="feedback-close-btn"></button>
+      <h2>Мы обязательно вам ответим!</h2>
+      <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+        <div>
+          <input id="name" type="text" name="name" required>
+          <label for="name">Как вас зовут?</label>
+        </div>
+        <div>
+          <input id="email" type="email" name="email" required>
+          <label for="email">Ваша почта для ответа</label>
+        </div>
+        <div>
+          <textarea id="comment" name="comment" rows="8" cols="40"></textarea>
+          <label for="comment">Напишите что-нибудь...</label>
+        </div>
+        <button class="btn" type="submit">Отправить</button>
+      </form>
+    </div>
     <div class="site-wrapper">
       <div class="content-wrapper">
         <header class="main-header clearfix">
@@ -40,7 +59,10 @@
                   <a class="user-block-item" href="#"></a>
                   <div class="search-popup">
                     <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
-                      <input type="text" name="search-text" placeholder="Что ищем?">
+                      <div>
+                        <input type="text" name="search-text">
+                        <label for="search-text">Что ищем?</label>
+                      </div>
                     </form>
                   </div>
                 </div>
@@ -48,8 +70,14 @@
                   <a class="user-block-item" href="#">Вход</a>
                   <div class="login-popup">
                     <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-                      <input type="email" name="email" placeholder="Электронная почта" required>
-                      <input type="password" name="password" placeholder="Пароль" required>
+                      <div>
+                        <input type="email" name="email" required>
+                        <label for="email">Электронная почта</label>
+                      </div>
+                      <div>
+                        <input type="password" name="password" required>
+                        <label for="password">Пароль</label>
+                      </div>
                       <button class="btn" type="submit">Войти</button>
                     </form>
                     <div class="login-options">
@@ -179,7 +207,7 @@
               <div class="row news clearfix">
                 <div class="card news-item">
                   <h2>Новое в нашем блоге</h2>
-                  <a class="link-dark" href="#">10 способов сервировки фруктовых щербетов к столу</a>
+                  <a class="link-dark" href="#">10 способов сервировки<br> фруктовых щербетов<br> к столу</a>
                 </div>
                   <div class="card news-item">
                     <div class="inner-wrapper">
@@ -187,7 +215,10 @@
                         Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =)
                       </p>
                       <form class="mailing-form" action="https://echo.htmlacademy.ru" method="post">
-                        <input type="email" name="email" placeholder="Электронная почта" required>
+                        <div>
+                          <input type="email" name="email" required>
+                          <label for="email">Электронная почта</label>
+                        </div>
                         <button class="btn" type="submit">Отправить</button>
                       </form>
                     </div>
@@ -195,40 +226,30 @@
               </div>
         </main>
       </div>
-    </div>
-    <div class="row map">
-      <figure class="map-image">
-        <img src="img/map.jpg" alt="map-adress">
-      </figure>
-      <section class="map-contacts">
-        <p>
-          Адрес главного офиса и<br>
-          офлайн магазина:<br>
-          <b class="contact-address">ул. Большая Конюшенная<br>
-            19/8, Санкт-Петербург</b>
-        </p>
-        <p>
-          Для заказа по телефону:<br>
-          <b class="contact-phone">8 812 450-25-25</b><br>
-          (с 10 до 20 ежедневно)
-        </p>
-        <div class="feedback-block">
-          <a href="#" class="btn">Форма обратной связи</a>
-          <div class="feedback-popup">
-            <button class="close-btn"></button>
-            <h2>Мы обязательно вам ответим!</h2>
-            <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
-              <input type="text" name="name" placeholder="Как вас зовут?" required>
-              <input type="email" name="email" placeholder="Ваша почта для ответа" required>
-              <textarea name="comment" rows="8" cols="40" placeholder="Напишите что-нибудь..."></textarea>
-              <button class="btn" type="submit">Отправить</button>
-            </form>
+      <div class="row map">
+        <figure class="map-image">
+          <!-- <img src="img/map.jpg" alt="map-adress"> -->
+          <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424123793!2d30.320894615796373!3d59.93879686904823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1462885195786" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe> -->
+          <div id="yandex-map"></div>
+        </figure>
+        <section class="map-contacts">
+          <p>
+            Адрес главного офиса и<br>
+            офлайн магазина:<br>
+            <b class="contact-address">ул. Большая Конюшенная<br>
+              19/8, Санкт-Петербург</b>
+          </p>
+          <p>
+            Для заказа по телефону:<br>
+            <b class="contact-phone">8 812 450-25-25</b><br>
+            (с 10 до 20 ежедневно)
+          </p>
+          <div class="feedback-block">
+            <a href="#" class="btn feedback">Форма обратной связи</a>
           </div>
-        </div>
-      </section>
-    </div>
-    <footer class="main-footer site-wrapper">
-      <div class="content-wrapper clearfix">
+        </section>
+      </div>
+      <footer class="main-footer content-wrapper clearfix">
         <section class="footer-social">
           <a class="social-btn social-btn-tw" href="#">Твитер</a>
           <a class="social-btn social-btn-inst" href="#">Инстаграм</a>
@@ -236,18 +257,24 @@
           <a class="social-btn social-btn-vk" href="#">Вконтакте</a>
         </section>
         <section class="footer-about">
-          <a class="link-light" href="#">Для поставщиков</a>
-          <a class="link-light" href="#">Наши документы</a>
-          <a class="link-light" href="#">О производстве</a>
-          <a class="link-light" href="#">Экологические стандарты</a>
+          <div class="left-col">
+            <a class="link-light" href="#">Для поставщиков</a><br>
+            <a class="link-light" href="#">О производстве</a>
+          </div>
+          <div class="right-col">
+            <a class="link-light" href="#">Наши документы</a><br>
+            <a class="link-light" href="#">Экологические стандарты</a>
+          </div>
         </section>
         <section class="footer-copyright">
-          <a href="https://htmlacademy.ru">
+          <a class="copyright-logo" href="https://htmlacademy.ru">
             <img src="img/logo-ha.png" alt="HTML Academy" width="110" height="40">
           </a>
-          <span>Сделано в HTML Academy © 2016</span>
+          <span>Сделано в <a class="link-light" href="#">HTML Academy</a> © 2016</span>
         </section>
-      </div>
-    </footer>
+      </footer>
+    </div>
+    <script src="js/index.js"></script>
+    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=PunZeTJI-Szh1GARWJJyrVcQ0rGdBWx5&width=100%&height=430&lang=ru_RU&sourceType=constructor&scroll=true&id=yandex-map"></script>
   </body>
 </html>
