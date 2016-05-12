@@ -60,6 +60,8 @@ body > input[type="radio"] {
 }
 
 .content-wrapper {
+  position: relative;
+
   box-sizing: border-box;
 
   min-width: 900px;
@@ -129,90 +131,101 @@ body > input[type="radio"] {
   border-color: rgba(255, 188, 158, 0.3);
 }
 
-form input,
-form textarea {
-  position: relative;
-  z-index: 20;
-
-  display: block;
-  width: 235px;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 10px 15px;
-
-  /*background: #ffffff;*/
-  /*background: none;*/
-  background: transparent;
-
-  border: 1px solid #d3d3d2;
-  border-radius: 5px;
+.wrapper-placeholder {
+	position: relative;
 }
 
-form > div {
-  position: relative;
-
-  display: inline-block;
-  width: 100%;
-  padding-top: 15px;
-  padding-bottom: 0;
-  overflow: hidden;
+.input-wrapper label,
+.feedback-popup label {
+	position: absolute;
+	top: -34px;
+	left: 16px;
+	font-size: 16px;
+	color: #9a9a9a;
+	line-height: 24.3px;
+	font-weight: normal;
+	-webkit-transition: 0.5s ease all;
+	transition: 0.5s ease all;
 }
 
-form label {
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  padding-top: 25px;
-  padding-left: 15px;
-
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
-  color: #999999;
+.input-wrapper label {
+	top: -52px;
+	left: 10px;
 }
 
-form input:hover,
-form textarea:hover {
-  border-width: 2px;
+label.placeholder-spam {
+	position: absolute;
+	top: -165px;
 }
 
-form input:focus,
-form textarea:focus {
-  border: 2px solid #8fbdec;
+.feedback-popup input {
+	border: 1px solid rgba(178, 178, 178, 0.51);
+	line-height: 24.3px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #353535;
+	padding: 9px 15px;
+	width: 267px;
+	box-sizing: border-box;
+	border-radius: 5px;
+	margin-top: 20px;
+	outline: none;
 }
 
-form input:focus + label,
-form textarea:focus + label {
-  top: 0;
-  left: 15px;
-
-  padding: 0;
-
-  font-size: 11px;
-  line-height: 13px;
-  color: #8fbdec;
+.feedback-popup textarea {
+	display: block;
+	width: 100%;
+  height: 155px;
+	border: 1px solid rgba(178, 178, 178, 0.51);
+	border-radius: 5px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #353535;
+	margin: 20px 0;
+	padding: 11px 15px;
+	outline: none;
+	box-sizing: border-box;
+}
+.input-wrapper input:hover,
+.feedback-popup input:hover,
+.feedback-popup textarea:hover {
+	border-color: rgba(154, 154, 154, 0.52);;
+	box-shadow:  0 0 0 1px rgba(154, 154, 154, 0.52);
 }
 
-form input:valid,
-form textarea:valid {
-  font-weight: 700;
-
-  border: 1px solid #d3d3d2;
-
-  background: white;
+.input-wrapper input:focus,
+.feedback-popup input:focus,
+.feedback-popup textarea:focus {
+	border-color: rgba(46, 136, 228, 0.52);
+	box-shadow:  0 0 0 1px rgba(46, 136, 228, 0.52);
 }
 
-form input:valid + label,
-form textarea:valid + label {
-  top: 0;
-  left: 15px;
+input[name="email-newsletter"]:focus ~ .wrapper-placeholder .placeholder-email,
+input[name="user-name"]:focus ~ .wrapper-placeholder .placeholder-name,
+input[name="user-mail"]:focus ~ .wrapper-placeholder .placeholder-email,
+textarea[name="user-spam"]:focus ~ .wrapper-placeholder .placeholder-spam {
+	font-size: 11px;
+	color: rgba(46, 136, 228, 0.52);
+	-webkit-transform: translateY(-32px);
+	transform: translateY(-32px);
+}
 
-  padding: 0;
+input[name="email-newsletter"]:valid ~ .wrapper-placeholder .placeholder-email,
+input[name="user-name"]:valid ~ .wrapper-placeholder .placeholder-name,
+input[name="user-mail"]:valid ~ .wrapper-placeholder .placeholder-email,
+textarea[name="user-spam"]:valid ~ .wrapper-placeholder .placeholder-spam {
+	font-size: 11px;
+	color: #9a9a9a;
+	-webkit-transform: translateY(-32px);
+	transform: translateY(-32px);
+}
 
-  font-size: 11px;
-  line-height: 13px;
-  color: #999999;
+input[name="email-newsletter"]:valid,
+input[name="user-name"]:valid,
+input[name="user-mail"]:valid,
+textarea[name="user-spam"]:valid {
+	border: 1px solid rgba(178, 178, 178, 0.51);
+	box-shadow: none;
 }
 
 .main-navigation {
@@ -511,7 +524,6 @@ form textarea:valid + label {
 .search-popup {
   width: 318px;
   padding: 20px 17px;
-  padding-top: 5px;
 }
 
 .search-popup input[type="text"] {
@@ -542,7 +554,7 @@ form textarea:valid + label {
   display: inline-block;
   width: 100%;
   box-sizing: border-box;
-  /*margin-bottom: 20px;*/
+  margin-bottom: 20px;
   padding: 9px 7px;
 
   border: 1px solid #d3d3d2;
@@ -729,10 +741,10 @@ main {
   left: 50%;
   transform: translate(-50%, -50%);
 
-  width: 31px;
-  height: 31px;
+  width: 32px;
+  height: 32px;
 
-  background: url("../img/sprite.png") no-repeat;
+  /*background: url("../img/sprite.png") no-repeat;*/
   border: 4px solid rgba(255, 255, 255, 0.5);
   border-radius: 50%;
   opacity: 0.8;
@@ -750,19 +762,23 @@ main {
 }
 
 .social-btn-tw::before {
-  background-position: -5px -625px;
+  background: url("../img/icon-twit.svg") no-repeat;
+  /*background-position: -5px -625px;*/
 }
 
 .social-btn-inst::before {
-  background-position: -5px -584px;
+  /*background-position: -5px -584px;*/
+  background: url("../img/icon-inst.svg") no-repeat;
 }
 
 .social-btn-fb::before {
-  background-position: -5px -543px;
+  /*background-position: -5px -543px;*/
+  background: url("../img/icon-fb.svg") no-repeat;
 }
 
 .social-btn-vk::before {
-  background-position: -5px -666px;
+  /*background-position: -5px -666px;*/
+  background: url("../img/icon-vk.svg") no-repeat;
 }
 
 .footer-about {
@@ -800,7 +816,7 @@ main {
   font-weight: 700;
 }
 
-.footer-about a:first-child::before {
+.footer-about .left-col a:first-child::before {
   position: absolute;
   top: 2px;
   left: -22px;
@@ -1221,40 +1237,35 @@ article {
 .news-item:nth-child(2) p {
   padding-bottom: 5px;
   margin: 0;
+  margin-bottom: 17px;
 
   font-size: 16px;
   line-height: 22px;
-
-  /*outline: 1px solid #666;*/
 }
 
-.mailing-form div {
-  width: 55%;
+.mailing-form .input-wrapper {
+  float: left;
+  width: 60%;
 }
 
-.mailing-form input[type="email"] {
-  display: inline-block;
-  vertical-align: top;
+.mailing-form input {
   width: 100%;
-  padding: 10px 15px;
+  margin-bottom: 18px;
+  padding: 11px 9px;
 
   font-size: 16px;
-  line-height: 24px;
 
-  border: 1px solid #d3d3d2;
+  border: 1px solid #d3d3d3;
   border-radius: 5px;
+  outline: none;
 }
 
 .mailing-form .btn {
-  display: inline-block;
-  width: 130px;
-  margin-top: 15px;
-  padding: 10px 15px;
-  vertical-align: top;
-  text-align: center;
+  float: right;
+  padding:10px 22px;
 
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 17px;
+	font-weight: normal;
 
   border: none;
 }
@@ -1265,7 +1276,7 @@ figure {
 }
 
 .map {
-  position: relative;
+  /*position: relative;*/
   width: 100%;
   min-width: 900px;
   max-height: 430px;
@@ -1288,9 +1299,8 @@ figure {
 
 .map-contacts {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(60%, -50%);
+  right: 2.3%;
+  bottom: 62px;
 
   width: 250px;
   padding: 30px 25px;
@@ -1392,7 +1402,7 @@ figure {
   font-weight: 700;
 }
 
-.feedback-popup input[type="text"],
+/*.feedback-popup input[type="text"],
 .feedback-popup input[type="email"] {
   width: 235px;
 }
@@ -1400,7 +1410,7 @@ figure {
 .feedback-popup textarea {
   width: 427px;
   margin-bottom: 25px;
-}
+}*/
 
 .feedback-form > .btn {
   float: right;
