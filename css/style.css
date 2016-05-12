@@ -132,25 +132,23 @@ body > input[type="radio"] {
 form input,
 form textarea {
   position: relative;
-  z-index: 2;
+  z-index: 20;
 
   display: block;
   width: 235px;
   box-sizing: border-box;
   margin: 0;
-  /*margin-bottom: 6px;*/
   padding: 10px 15px;
 
+  /*background: #ffffff;*/
   /*background: none;*/
-  background: #ffffff;
+  background: transparent;
 
   border: 1px solid #d3d3d2;
   border-radius: 5px;
 }
 
 form > div {
-  z-index: 1;
-
   position: relative;
 
   display: inline-block;
@@ -158,13 +156,9 @@ form > div {
   padding-top: 15px;
   padding-bottom: 0;
   overflow: hidden;
-
-  /*outline: 1px solid #666;*/
 }
 
 form label {
-  z-index: 2;
-
   position: absolute;
   top: 0;
   left: 0;
@@ -238,6 +232,7 @@ form textarea:valid + label {
 }
 
 .main-menu {
+  min-width: 530px;
   margin: 0;
   padding: 0;
   padding-top: 13px;
@@ -370,7 +365,7 @@ form textarea:valid + label {
 
 .user-block {
   float: right;
-  width: 300px;
+  min-width: 270px;
   margin-top: 27px;
   text-align: right;
 }
@@ -781,8 +776,14 @@ main {
 .footer-about .right-col {
   display: inline-block;
   width: 35%;
+  min-width: 170px;
 
   text-align: left;
+}
+
+.footer-about .left-col {
+  width: 20%;
+  min-width: 140px;
 }
 
 .footer-about a {
@@ -817,6 +818,11 @@ main {
   float: right;
   width: 18%;
   margin-top: -65px;
+
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
 }
 
 .footer-copyright .copyright-logo {
@@ -827,13 +833,7 @@ main {
   font-size: 0;
 }
 
-.footer-copyright span {
-  display: block;
-}
-
-.footer-copyright span,
 .footer-copyright .link-light {
-  color: #ffffff;
   font-size: 12px;
   line-height: 18px;
   font-weight: 400;
@@ -961,8 +961,9 @@ section {
 }
 
  .card {
-  min-height: 230px;
   width: 48.86%;
+  min-width: 420px;
+  min-height: 230px;
   padding: 20px;
 
   font-size: 18px;
@@ -1076,9 +1077,16 @@ article {
 }
 
 .catalog-item h1 {
+  padding-top: 5px;
+  line-height: 0;
+}
+
+.catalog-item .link-light {
   display: inline;
 
-  padding-top: 14px;
+
+  margin: 0;
+  padding: 0;
 
   font-size: 16px;
   line-height: 22px;
@@ -1087,6 +1095,7 @@ article {
 }
 
 .about-shop {
+  /*min-width: 860px;*/
   padding: 28px 21px;
 
   font-weight: 400;
@@ -1116,8 +1125,9 @@ article {
 
   display: inline-block;
   vertical-align: top;
-  width: 45%;
-  padding-left: 5%;
+  width: 44%;
+  min-width: 320px;
+  padding-left: 6%;
 
   font-size: 16px;
   line-height: 22px;
@@ -1190,7 +1200,7 @@ article {
 
 .news-item:nth-child(2) {
   float: right;
-  min-height: 208px;
+  min-height: 220px;
   padding: 6px;
 
   font-weight: 400;
@@ -1199,19 +1209,23 @@ article {
 }
 
 .news-item:nth-child(2) .inner-wrapper {
-  min-height: 150px;
+  min-height: 208px;
   padding: 29px 22px;
+  padding-bottom: 20px;
+  box-sizing: border-box;
 
   background: #f8f7f4;
   border-radius: 10px;
 }
 
 .news-item:nth-child(2) p {
-  padding-bottom: 20px;
+  padding-bottom: 5px;
   margin: 0;
 
   font-size: 16px;
   line-height: 22px;
+
+  /*outline: 1px solid #666;*/
 }
 
 .mailing-form div {
@@ -1252,9 +1266,9 @@ figure {
 
 .map {
   position: relative;
+  min-width: 860px;
   max-height: 430px;
   margin: 0 auto;
-  /*margin-bottom: 40px;*/
 }
 
 .map-image img {
@@ -1275,7 +1289,7 @@ figure {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(90%, -50%);
+  transform: translate(60%, -50%);
 
   width: 250px;
   padding: 30px 25px;
