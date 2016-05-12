@@ -1266,7 +1266,8 @@ figure {
 
 .map {
   position: relative;
-  min-width: 860px;
+  width: 100%;
+  min-width: 900px;
   max-height: 430px;
   margin: 0 auto;
 }
