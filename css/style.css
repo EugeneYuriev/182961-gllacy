@@ -1379,6 +1379,9 @@ figure {
 
 .yandex-map {
   width: 100%;
+  min-width: 900px;
+  height: 430px;
+  margin: 0 auto;
 
   background: url("../img/map.jpg") no-repeat;
 }
