@@ -137,7 +137,9 @@ body > input[type="radio"] {
 }
 
 .input-wrapper label,
-.feedback-popup label {
+.feedback-popup label,
+.search-popup label,
+.login-popup label {
 	position: absolute;
 	top: -34px;
 	left: 16px;
@@ -149,6 +151,10 @@ body > input[type="radio"] {
 
 	-webkit-transition: 0.5s ease all;
 	transition: 0.5s ease all;
+}
+
+.login-popup label {
+  top: -54px;
 }
 
 .input-wrapper label {
@@ -193,16 +199,21 @@ label.placeholder-spam {
 	outline: none;
 	box-sizing: border-box;
 }
+
 .input-wrapper input:hover,
 .feedback-popup input:hover,
-.feedback-popup textarea:hover {
+.feedback-popup textarea:hover,
+.search-popup input:hover,
+.login-popup input:hover {
 	border-color: rgba(154, 154, 154, 0.52);;
 	box-shadow:  0 0 0 1px rgba(154, 154, 154, 0.52);
 }
 
 .input-wrapper input:focus,
 .feedback-popup input:focus,
-.feedback-popup textarea:focus {
+.feedback-popup textarea:focus,
+.search-popup input:focus,
+.login-popup input:focus {
 	border-color: rgba(46, 136, 228, 0.52);
 	box-shadow:  0 0 0 1px rgba(46, 136, 228, 0.52);
 }
@@ -210,7 +221,10 @@ label.placeholder-spam {
 input[name="email-newsletter"]:focus ~ .wrapper-placeholder .placeholder-email,
 input[name="user-name"]:focus ~ .wrapper-placeholder .placeholder-name,
 input[name="user-mail"]:focus ~ .wrapper-placeholder .placeholder-email,
-textarea[name="user-spam"]:focus ~ .wrapper-placeholder .placeholder-spam {
+textarea[name="user-spam"]:focus ~ .wrapper-placeholder .placeholder-spam,
+input[name="email"]:focus ~ .wrapper-placeholder .placeholder-email,
+input[name="password"]:focus ~ .wrapper-placeholder .placeholder-password,
+input[name="search-text"]:focus ~ .wrapper-placeholder .placeholder-search-text {
   color: rgba(46, 136, 228, 0.52);
   font-size: 11px;
 
@@ -221,7 +235,10 @@ textarea[name="user-spam"]:focus ~ .wrapper-placeholder .placeholder-spam {
 input[name="email-newsletter"]:valid ~ .wrapper-placeholder .placeholder-email,
 input[name="user-name"]:valid ~ .wrapper-placeholder .placeholder-name,
 input[name="user-mail"]:valid ~ .wrapper-placeholder .placeholder-email,
-textarea[name="user-spam"]:valid ~ .wrapper-placeholder .placeholder-spam {
+textarea[name="user-spam"]:valid ~ .wrapper-placeholder .placeholder-spam,
+input[name="email"]:valid ~ .wrapper-placeholder .placeholder-email,
+input[name="password"]:valid ~ .wrapper-placeholder .placeholder-password,
+input[name="search-text"]:valid ~ .wrapper-placeholder .placeholder-search-text {
   color: #9a9a9a;
   font-size: 11px;
 
@@ -232,7 +249,10 @@ textarea[name="user-spam"]:valid ~ .wrapper-placeholder .placeholder-spam {
 input[name="email-newsletter"]:valid,
 input[name="user-name"]:valid,
 input[name="user-mail"]:valid,
-textarea[name="user-spam"]:valid {
+textarea[name="user-spam"]:valid,
+input[name="email"]:valid,
+input[name="password"]:valid,
+input[name="search-text"]:valid {
 	border: 1px solid rgba(178, 178, 178, 0.51);
 	box-shadow: none;
 }
@@ -1384,6 +1404,7 @@ figure {
   margin: 0 auto;
 
   background: url("../img/map.jpg") no-repeat;
+  background-position: 50% 0;
 }
 
 .map-contacts {
