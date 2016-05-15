@@ -15,11 +15,11 @@ body {
 }
 
 body {
+  color: #323232;
   font-size: 16px;
   font-weight: 700;
   line-height: 22px;
   font-family: 'Roboto', "Arial", sans-serif;
-  color: #323232;
 
   background-color: #849d8f;
 }
@@ -68,8 +68,6 @@ body > input[type="radio"] {
   margin: 0 auto;
   padding: 0 2.3%;
   box-sizing: border-box;
-
-  /*outline: 1px solid #666;*/
 }
 
 .btn {
@@ -77,11 +75,11 @@ body > input[type="radio"] {
 
   background: #f16642;
 
+  color: #fefefe;
   text-decoration: none;
   font-size: 18px;
   line-height: 24px;
   font-weight: bold;
-  color: #fefefe;
   text-align: center;
   text-shadow: 0 2px 2px #c73c24;
 
@@ -213,8 +211,9 @@ input[name="email-newsletter"]:focus ~ .wrapper-placeholder .placeholder-email,
 input[name="user-name"]:focus ~ .wrapper-placeholder .placeholder-name,
 input[name="user-mail"]:focus ~ .wrapper-placeholder .placeholder-email,
 textarea[name="user-spam"]:focus ~ .wrapper-placeholder .placeholder-spam {
-	font-size: 11px;
-	color: rgba(46, 136, 228, 0.52);
+  color: rgba(46, 136, 228, 0.52);
+  font-size: 11px;
+
 	-webkit-transform: translateY(-32px);
 	transform: translateY(-32px);
 }
@@ -223,8 +222,9 @@ input[name="email-newsletter"]:valid ~ .wrapper-placeholder .placeholder-email,
 input[name="user-name"]:valid ~ .wrapper-placeholder .placeholder-name,
 input[name="user-mail"]:valid ~ .wrapper-placeholder .placeholder-email,
 textarea[name="user-spam"]:valid ~ .wrapper-placeholder .placeholder-spam {
-	font-size: 11px;
-	color: #9a9a9a;
+  color: #9a9a9a;
+  font-size: 11px;
+
 	-webkit-transform: translateY(-32px);
 	transform: translateY(-32px);
 }
@@ -249,8 +249,8 @@ textarea[name="user-spam"]:valid {
 }
 
 .main-header-logo {
-  float: left;
   width: 160px;
+  float: left;
 }
 
 .main-menu {
@@ -1377,10 +1377,11 @@ figure {
   margin: 0 auto;
 }
 
-/*.map-image .yandex-map {
+.yandex-map {
   width: 100%;
-  margin: 0 auto;
-}*/
+
+  background: url("../img/map.jpg") no-repeat;
+}
 
 .map-contacts {
   position: absolute;
@@ -1445,9 +1446,9 @@ figure {
   z-index: 30;
   top: 22%;
   left: 50%;
-  transform: translateX(-50%);
 
   width: 427px;
+  margin-left: -200px;
   padding: 21px 25px;
 
   font-size: 16px;
@@ -1460,6 +1461,22 @@ figure {
 
 .feedback-popup-show {
   display: block;
+  animation: bounce 0.6s;
+}
+
+@keyframes bounce {
+  0%   {
+    transform: translateY(-2000px);
+  }
+  70%  {
+    transform: translateY(30px);
+  }
+  90%  {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .feedback-popup .feedback-close-btn {
@@ -1586,6 +1603,7 @@ figure {
   border: none;
   outline: none;
   box-shadow: none;
+  cursor: pointer;
 
   -webkit-appearance: none;
 	-o-appearance: none;
@@ -1671,6 +1689,8 @@ figure {
 
   background: none;
   border: none;
+
+  cursor: pointer;
 }
 
 .range-filter .range-controls {
@@ -1739,6 +1759,8 @@ figure {
   padding-right: 10px;
 
   font-weight: 500;
+
+  cursor: pointer;
 }
 
 .search-fatness input {
@@ -1756,6 +1778,7 @@ figure {
 
   border: 1px solid #ffffff;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .search-fatness input:checked + .radio-indicator::before {
@@ -1807,6 +1830,8 @@ figure {
   padding-right: 10px;
 
   font-weight: 500;
+
+  cursor: pointer;
 }
 
 .search-addition input {
@@ -1824,6 +1849,7 @@ figure {
 
   border: 1px solid #ffffff;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .search-addition input:checked + .checkbox-indicator::before {
