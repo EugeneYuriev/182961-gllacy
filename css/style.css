@@ -16,7 +16,7 @@ body {
 
 body {
   color: #323232;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
   line-height: 22px;
   font-family: 'Roboto', "Arial", sans-serif;
@@ -307,7 +307,7 @@ input[name="search-text"]:valid {
   color: #333333;
 }
 
-.main-menu > li:hover a {
+.menu-item:hover a {
   color: #333333;
   border: none;
 }
@@ -317,17 +317,17 @@ input[name="search-text"]:valid {
 
 }
 
-.main-menu .active {
+.main-menu .menu-item-active {
   background: #d07058;
   border-radius: 16px;
   color: #ffffff;
 }
 
-.main-menu .active a {
+.menu-item-active a {
   border: none;
 }
 
-.main-menu > li:hover .catalog-submenu{
+.menu-item:hover .catalog-submenu {
   display: block;
 }
 
@@ -384,15 +384,16 @@ input[name="search-text"]:valid {
   text-decoration: none;
 }
 
-.catalog-submenu .active a {
+.submenu-item-active a {
   color: #ffffff;
+  background: #d07058;
 }
 
-.catalog-submenu li:first-child a {
+.submenu-item:first-child a {
   padding-top: 12px;
 }
 
-.catalog-submenu li:last-child a {
+.submenu-item:last-child a {
   padding-bottom: 17px;
 }
 
@@ -407,21 +408,21 @@ input[name="search-text"]:valid {
   box-shadow: none;
 }
 
-.catalog-submenu li:first-child a:hover,
-.catalog-submenu li:first-child a:active {
+.submenu-item:first-child a:hover,
+.submenu-item:first-child a:active {
   border-radius: 8px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-.catalog-submenu li:last-child a:hover,
-.catalog-submenu li:last-child a:active {
+.submenu-item:last-child a:hover,
+.submenu-item:last-child a:active {
   border-radius: 8px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
 
-.catalog-submenu li:first-child a {
+.submenu-item:first-child a {
   font-weight: 700;
 }
 
@@ -618,6 +619,7 @@ input[name="search-text"]:valid {
 .login-popup input[type="password"],
 .login-popup .btn {
   display: inline-block;
+  vertical-align: top;
   width: 100%;
   box-sizing: border-box;
   margin-bottom: 20px;
@@ -761,6 +763,7 @@ main {
 .breadcrumbs li::after {
   content: "»";
   display: inline-block;
+  vertical-align: top;
   padding-left: 8px;
 }
 
@@ -788,6 +791,7 @@ main {
 
 .header-contacts b {
   display: inline-block;
+  vertical-align: top;
   padding-top: 6px;
 
   font-size: 22px;
@@ -879,6 +883,7 @@ main {
 .footer-about .left-col,
 .footer-about .right-col {
   display: inline-block;
+  vertical-align: top;
   width: 35%;
   min-width: 170px;
 
@@ -899,12 +904,12 @@ main {
 }
 
 
-.footer-about .left-col a:first-child {
+.footer-about .link-favorite {
   position: relative;
   font-weight: 700;
 }
 
-.footer-about .left-col a:first-child::before {
+.footer-about .link-favorite::before {
   position: absolute;
   top: 2px;
   left: -22px;
@@ -1092,7 +1097,7 @@ section {
 .promo-strawberry {
   float: left;
   color: #ffffff;
-  background: url("../img/bg-raspberry.jpg");
+  background: #b4002d url("../img/bg-raspberry.jpg");
 }
 
 .promo-strawberry b,
@@ -1115,7 +1120,7 @@ section {
   float: right;
 
   color: #ffffff;
-  background: url("../img/bg-chocolate.jpg");
+  background: #432111 url("../img/bg-chocolate.jpg");
 }
 
 .promo-chocolate .btn {
@@ -1215,7 +1220,7 @@ article {
 
   font-weight: 400;
 
-  background: url("../img/bg-about-shop.jpg");
+  background: #ede1c9 url("../img/bg-about-shop.jpg");
   border-radius: 10px;
 }
 
@@ -1295,7 +1300,7 @@ article {
   min-height: 220px;
   padding: 25px 22px;
 
-  background: url("../img/bg-strawberry.jpg");
+  background: #ffffff url("../img/bg-strawberry.jpg");
 }
 
 .news-item:nth-child(1) h2 {
@@ -1431,6 +1436,7 @@ figure {
 
 .map-contacts .contact-address {
   display: inline-block;
+  vertical-align: top;
 
   font-size: 18px;
   line-height: 24px;
@@ -1442,6 +1448,7 @@ figure {
 
 .map-contacts .contact-phone {
   display: inline-block;
+  vertical-align: top;
 
   padding-top: 8px;
   padding-bottom: 7px;
@@ -1453,6 +1460,7 @@ figure {
 
 .feedback-block {
   display: inline-block;
+  vertical-align: top;
   padding-top: 25px;
 }
 
@@ -1542,6 +1550,7 @@ figure {
 
 .catalog-title {
   display: inline-block;
+  vertical-align: top;
   margin: 0;
   margin-bottom: 35px;
   padding: 0;
@@ -1616,6 +1625,7 @@ figure {
   position: relative;
 
   display: inline-block;
+  vertical-align: top;
   margin: 0;
   padding: 7px;
   padding-right: 15px;
@@ -1688,6 +1698,7 @@ figure {
 
 .price-controls label {
   display: inline-block;
+  vertical-align: top;
   width: 100px;
   margin: 0;
   padding: 0;
@@ -1988,7 +1999,7 @@ figure {
   z-index: 3;
 }
 
-.catalog-body .catalog-item:hover .item-express-view {
+.catalog-item:hover .item-express-view {
   z-index: 2;
   display: block;
 }
@@ -2012,7 +2023,7 @@ figure {
 
 .pagination li {
   display: inline-block;
-  vertical-align: middle;;
+  vertical-align: middle;
   margin: 0;
   margin-right: 2px;
   padding: 0;
